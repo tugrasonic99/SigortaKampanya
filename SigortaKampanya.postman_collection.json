@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "4c8c8171-ce9c-41eb-bc94-e05f809002fc",
+		"name": "SigortaKampanya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14499805"
+	},
+	"item": [
+		{
+			"name": "TumKampanyalar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/kampanya/tumkampanyalar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kampanya",
+						"tumkampanyalar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KampanyaGiris",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"kampanyaBasligi\":\"TSS sigorta\",\r\n    \"kampanyaDetayAciklamasi\":\"TSS sigortasi sigortasının bu sefer olan kampanyası herkesi sasırtacak emin olabilirsiniz.\",\r\n    \"kampanyaKategorisi\":\"TSS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/kampanya/kampanyagiris",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kampanya",
+						"kampanyagiris"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "KampanyaGirisHayatSigortasi",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "KampanyaGirisDiger",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "KampanyaGirisTSS",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "KampanyaStatu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/kampanya/kampanyastatu",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kampanya",
+						"kampanyastatu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KampanyaStatuDegistir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":\"1\",\r\n\"statu\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/kampanya/kampanyastatudegistir",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kampanya",
+						"kampanyastatudegistir"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "statu",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
