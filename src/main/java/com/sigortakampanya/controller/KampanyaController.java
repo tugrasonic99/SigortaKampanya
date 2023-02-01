@@ -28,7 +28,6 @@ public class KampanyaController {
 		
 	}
 	
-	
 	@PostMapping
 	@RequestMapping(value = "/kampanyastatudegistir")
 	public Kampanya kampayaAktivasyon(@RequestBody StatuHelper helper) {
